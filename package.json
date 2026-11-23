@@ -1,0 +1,19 @@
+{
+  "name": "sweety-blood-glucose-tracker",
+  "version": "1.0.0",
+  "description": "Blood Glucose Tracker Web Application (MERN + PostgreSQL)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "seed": "npm --prefix server run seed",
+    "test": "npm --prefix server test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
